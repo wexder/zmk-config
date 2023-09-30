@@ -1,8 +1,7 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      # TODO is this right ?
-      url-base: https://github.com/Xoffio/
+      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
       remote: zmkfirmware
