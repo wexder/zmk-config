@@ -30,7 +30,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
-            bindings = <&to>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
 
         mll: my_holdlater_tolayer {
@@ -55,9 +55,9 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
             bindings = <
                 &kp TAB      &kp Q       &kp W &kp E &kp R &kp T      &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSLH
-                &mth 1 LSHFT &kp A       &kp S &kp D &kp F &kp G      &kp H &kp J  &kp K     &kp L   &mth 3 SEMI &kp SQT
+                &mo 3        &kp A       &kp S &kp D &kp F &kp G      &kp H &kp J  &kp K     &kp L   &mth 3 SEMI &mth 2 SQT
                 &kp LSHFT    &mt LCTRL Z &kp X &kp C &kp V &kp B      &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                                      &kp LGUI &kp BSPC &mth 1 SPACE     &kp RET &kp ESC &kp TAB
+                                      &kp LGUI &kp BSPC &mth 1 SPACE  &kp RET &kp ESC &kp TAB
             >;
         };
 
@@ -69,7 +69,7 @@
             //                    | GUI | DFL | SPC |   | ENT |     | ALT |
             bindings = <
                 &kp TAB    &kp N1   &kp N2  &kp N3  &kp N4  &kp N5         &kp N6   &kp N7   &kp N8     &kp N9    &kp N0 &kp BSPC
-                &trans     &trans   &trans  &trans  &trans  &trans         &kp LEFT &kp DOWN &kp UP     &kp RIGHT &trans &trans
+                &trans     &trans   &trans  &trans  &trans  &trans         &trans   &kp LEFT &kp DOWN   &kp UP    &kp RIGHT &trans
                 &kp LSHFT  &trans   &trans  &trans  &trans  &trans         &trans   &trans   &trans     &trans    &trans &trans
                                         &kp LGUI  &to 0   &kp SPACE        &kp RET  &mll 2 0   &kp RALT
             >;
