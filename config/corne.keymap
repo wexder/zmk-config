@@ -105,7 +105,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans      &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans      &trans  &trans  &kp C_PP
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp C_PREV  &kp C_NEXT  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans      &trans
+                        &trans  &trans  &to 4     &trans  &trans      &trans
             >;
         };
 
