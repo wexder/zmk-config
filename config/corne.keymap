@@ -16,9 +16,7 @@
 // Overwrite the display cs pin
 // This have to be comment out for the right side.
 
-&nice_view_spi {
-    cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>;
-};
+&nice_view_spi { cs-gpios = <&pro_micro 1 GPIO_ACTIVE_HIGH>; };
 
 / {
     behaviors {
@@ -40,6 +38,22 @@
             tapping-term-ms = <250>;
             quick-tap-ms = <125>;
             bindings = <&mo>, <&to>;
+        };
+    };
+
+    macros {
+        ctrl_alt_g: ctrl_alt_g {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp G>,
+                <&macro_release>,
+                <&kp LCTRL &kp LEFT_ALT>;
+
+            label = "CTRL_ALT_G";
         };
     };
 
@@ -99,10 +113,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp F11  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5          &kp F6  &kp F7             &kp F8           &kp F9      &kp F10  &kp F12
-&trans   &trans  &trans  &trans  &trans  &kp DEL         &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans      &trans   &kp C_PP
-&trans   &trans  &trans  &trans  &trans  &kp LEFT_ALT    &trans  &trans             &kp C_PREV       &kp C_NEXT  &trans   &trans
-                         &trans  &trans  &mo 4           &to 0   &to 5              &trans
+&kp F11  &kp F1  &kp F2  &kp F3  &kp F4       &kp F5          &kp F6  &kp F7             &kp F8           &kp F9      &kp F10  &kp F12
+&trans   &trans  &trans  &trans  &ctrl_alt_g  &kp DEL         &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans      &trans   &kp C_PP
+&trans   &trans  &trans  &trans  &trans       &kp LEFT_ALT    &trans  &trans             &kp C_PREV       &kp C_NEXT  &trans   &trans
+                         &trans  &trans       &mo 4           &to 0   &to 5              &trans
             >;
         };
 
